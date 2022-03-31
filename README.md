@@ -6,11 +6,16 @@
 <br>
 
 ## Descrição do Projeto
-
+A Livraria Nova Book [Fictícia]...
 
 <br>
 
 ## Tecnologias
+- brModelo
+- PostgreSQL
+- SQL Power Architect
+- Pentaho Data Integration
+- Power BI
 
 <br>
 
