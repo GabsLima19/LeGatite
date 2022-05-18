@@ -24,11 +24,11 @@ CREATE TABLE dim_data (
 );
 
 
-CREATE SEQUENCE dim_compra_sk_livro_seq;
+CREATE SEQUENCE dim_livro_sk_livro_seq;
 
-CREATE TABLE dim_compra (
-                sk_livro INTEGER NOT NULL DEFAULT nextval('dim_compra_sk_livro_seq'),
-                nk_cliente INTEGER NOT NULL,
+CREATE TABLE dim_livro (
+                sk_livro INTEGER NOT NULL DEFAULT nextval('dim_livro_sk_livro_seq'),
+                nk_livro INTEGER NOT NULL,
                 nome_livro VARCHAR NOT NULL,
                 ano_publicacao INTEGER NOT NULL,
                 autor VARCHAR NOT NULL,
@@ -39,11 +39,11 @@ CREATE TABLE dim_compra (
                 etl_dt_inicio DATE NOT NULL,
                 etl_dt_fim DATE NOT NULL,
                 versao INTEGER NOT NULL,
-                CONSTRAINT dim_compra_pk PRIMARY KEY (sk_livro)
+                CONSTRAINT dim_livro_pk PRIMARY KEY (sk_livro)
 );
 
 
-ALTER SEQUENCE dim_compra_sk_livro_seq OWNED BY dim_compra.sk_livro;
+ALTER SEQUENCE dim_livro_sk_livro_seq OWNED BY dim_livro.sk_livro;
 
 CREATE SEQUENCE dim_filial_sk_filial_seq;
 
@@ -96,7 +96,7 @@ NOT DEFERRABLE;
 
 ALTER TABLE fato_compra ADD CONSTRAINT dim_compra_fato_compra_fk
 FOREIGN KEY (sk_livro)
-REFERENCES dim_compra (sk_livro)
+REFERENCES dim_livro (sk_livro)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
