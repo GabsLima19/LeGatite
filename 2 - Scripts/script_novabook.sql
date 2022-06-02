@@ -1,3 +1,21 @@
+CREATE TABLE dim_item_pedido (
+                nk_pedido INTEGER NOT NULL,
+                id_produto VARCHAR NOT NULL
+);
+
+
+CREATE TABLE dim_pedido (
+                sk_pedido INTEGER NOT NULL,
+                nk_pedido INTEGER NOT NULL,
+                id_cliente INTEGER NOT NULL,
+                id_filial INTEGER NOT NULL,
+				valor INTEGER,
+                etl_dt_inicio DATE NOT NULL,
+                etl_dt_fim DATE NOT NULL,
+                versao INTEGER NOT NULL,
+                CONSTRAINT dim_pedido_pk PRIMARY KEY (sk_pedido)
+);
+
 
 CREATE TABLE dim_data (
                 sk_data INTEGER NOT NULL,
@@ -81,36 +99,7 @@ CREATE TABLE fato_compra (
                 sk_cliente INTEGER NOT NULL,
                 sk_livro INTEGER NOT NULL,
                 sk_filial INTEGER NOT NULL,
+                sk_pedido INTEGER NOT NULL,
                 sk_data INTEGER NOT NULL,
-                dd_id_compra INTEGER NOT NULL,
                 md_valor REAL NOT NULL
 );
-
-
-ALTER TABLE fato_compra ADD CONSTRAINT dim_data_fato_compra_fk
-FOREIGN KEY (sk_data)
-REFERENCES dim_data (sk_data)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
-NOT DEFERRABLE;
-
-ALTER TABLE fato_compra ADD CONSTRAINT dim_compra_fato_compra_fk
-FOREIGN KEY (sk_livro)
-REFERENCES dim_livro (sk_livro)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
-NOT DEFERRABLE;
-
-ALTER TABLE fato_compra ADD CONSTRAINT dim_filial_fato_compra_fk
-FOREIGN KEY (sk_filial)
-REFERENCES dim_filial (sk_filial)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
-NOT DEFERRABLE;
-
-ALTER TABLE fato_compra ADD CONSTRAINT dim_cliente_fato_compra_fk
-FOREIGN KEY (sk_cliente)
-REFERENCES dim_cliente (sk_cliente)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
-NOT DEFERRABLE;
