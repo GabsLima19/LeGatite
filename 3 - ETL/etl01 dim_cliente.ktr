@@ -621,13 +621,13 @@ FROM "public".cliente
         <update>Punch through</update>
       </field>
       <field>
-        <name>dt_nascimento</name>
-        <lookup>dt_nascimento</lookup>
+        <name>sexo_cliente</name>
+        <lookup>sexo_cliente</lookup>
         <update>Punch through</update>
       </field>
       <field>
-        <name>sexo_cliente</name>
-        <lookup>sexo_cliente</lookup>
+        <name>dt_nascimento</name>
+        <lookup>dt_nascimento</lookup>
         <update>Punch through</update>
       </field>
       <return>
