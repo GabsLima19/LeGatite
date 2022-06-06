@@ -4,16 +4,7 @@
  <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
  <project-data-sources>
   <data-source id="DS0">
-   <property key="Connection Type" value="PostgreSQL" />
    <property key="Logical" value="PlayPen Database" />
-   <property key="JDBC URL" value="jdbc:postgresql://localhost:5432/dw_NovaBook" />
-   <property key="UID" value="postgres" />
-   <property key="PWD" value="postgres" />
-   <property key="ca.sqlpower.architect.etl.kettle.database" value="" />
-   <property key="ca.sqlpower.architect.etl.kettle.port" value="" />
-   <property key="ca.sqlpower.architect.etl.kettle.hostname" value="" />
-   <property key="ca.sqlpower.architect.etl.kettle.repos.login" value="" />
-   <property key="ca.sqlpower.architect.etl.kettle.repos.password" value="" />
   </data-source>
   <data-source id="DS2">
    <property key="Connection Type" value="PostgreSQL" />
@@ -32,7 +23,7 @@
   <database id="DB0" populated="true" UUID="23be0e26-ce0d-4ab0-a142-9369b1ff2bb1" dbcs-ref="DS2" name="PlayPen Database" physicalName="dw_novabook" >
    <catalog id="CAT1" populated="true" UUID="2c57d9c6-5595-4acd-922c-cf7bd9d27f62" name="dw_novabook" nativeTerm="database" physicalName="dw_novabook" >
     <schema id="SCH2" populated="true" UUID="e7dd39a1-d597-4a10-910d-ac5a1ae645d1" name="" nativeTerm="schema" physicalName="" >
-     <table id="TAB3" populated="true" UUID="b8d15bac-9f2f-4160-8d09-ed67c2f21ea0" name="dim_data" objectType="TABLE" physicalName="dim_data" sql-exception="ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: Failed to populate indices of table dim_data" >
+     <table id="TAB3" populated="true" UUID="b8d15bac-9f2f-4160-8d09-ed67c2f21ea0" name="dim_data" objectType="TABLE" physicalName="dim_data" sql-exception="ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: Failed to populate indices of table dim_data" >
       <remarks></remarks>
       <folder id="FOLTAB31" populated="true" name="Columns" physicalName="Columns" type="1">
        <column id="COL4" populated="true" UUID="3fb1bd82-0e3d-4148-9cd3-44d676ac40b4" autoIncrement="false" defaultValue="" name="sk_data" nullable="0" physicalName="sk_data" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
@@ -733,7 +724,7 @@
     </index>
    </folder>
   </table>
-  <table id="TAB204" populated="true" UUID="54cd5ad1-8d2d-490b-a284-d53610786b16" name="dim_data" objectType="TABLE" physicalName="dim_data" sql-exception="ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: Failed to populate indices of table dim_data" >
+  <table id="TAB204" populated="true" UUID="54cd5ad1-8d2d-490b-a284-d53610786b16" name="dim_data" objectType="TABLE" physicalName="dim_data" sql-exception="ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: Failed to populate indices of table dim_data" >
    <remarks></remarks>
    <folder id="FOLTAB2041" populated="true" name="Columns" physicalName="Columns" type="1">
     <column id="COL205" populated="true" UUID="0a587679-f843-4fa4-99e1-c7181c842899" autoIncrement="false" defaultValue="" name="sk_data" nullable="0" physicalName="sk_data" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL4" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
@@ -875,7 +866,7 @@
     <column-mapping id="CMP247" populated="true" UUID="5dc22d0b-51b8-4d83-96a1-d3e566b6a9a8" fk-column-ref="COL198" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL182" />
    </relationship>
    <relationship id="REL248" populated="true" UUID="f841d407-9d5f-4b4a-be6d-8bbab66e8541" deferrability="7" deleteRule="3" fk-table-ref="TAB196" fkCardinality="7" identifying="false" name="dim_data_fato_compra_fk" physicalName="dim_data_fato_compra_fk" pk-table-ref="TAB204" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP249" populated="true" UUID="f85487d4-df2d-4c28-9fdb-136d0e9ad9a4" fk-column-ref="COL200" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL205" />
+    <column-mapping id="CMP249" populated="true" UUID="04d8db2d-a9ab-49fe-b965-cfec9e0385de" fk-column-ref="COL201" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL205" />
    </relationship>
    <relationship id="REL250" populated="true" UUID="f33d5876-8a20-402e-b417-ec2123ba2582" deferrability="7" deleteRule="3" fk-table-ref="TAB196" fkCardinality="7" identifying="false" name="dim_pedido_fato_compra_fk" physicalName="dim_pedido_fato_compra_fk" pk-table-ref="TAB227" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP251" populated="true" UUID="04dca701-e20b-4438-95b8-cad04cf681f3" fk-column-ref="COL200" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL228" />
@@ -884,10 +875,10 @@
    </relationship>
   </relationships>
  </target-database>
- <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="false" target-schema="public"> </ddl-generator>
+ <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="true" target-schema="public"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
- <play-pen zoom="0.8408964152537144" viewportX="0" viewportY="30" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+ <play-pen zoom="0.8408964152537144" viewportX="0" viewportY="31" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
   <table-pane table-ref="TAB161" x="78" y="403" bgColor="0xeeeeee" fgColor="0x000000" rounded="true" dashed="false"/>
   <table-pane table-ref="TAB172" x="897" y="438" bgColor="0xeeeeee" fgColor="0x000000" rounded="true" dashed="false"/>
   <table-pane table-ref="TAB181" x="225" y="618" bgColor="0xeeeeee" fgColor="0x000000" rounded="true" dashed="false"/>
@@ -896,7 +887,7 @@
   <table-pane table-ref="TAB227" x="652" y="675" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB238" x="934" y="648" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-link relationship-ref="REL242" pkConnection="0.6464646464646465" fkConnection="0.23255813953488372" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
-  <table-link relationship-ref="REL246" pkConnection="0.050761421319796954" fkConnection="0.11961722488038277" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="65"/>
+  <table-link relationship-ref="REL246" pkConnection="0.030456852791878174" fkConnection="0.11961722488038277" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="65"/>
   <table-link relationship-ref="REL244" pkConnection="0.6017699115044248" fkConnection="0.3411764705882353" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
   <table-link relationship-ref="REL248" pkConnection="0.48936170212765956" fkConnection="0.5" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
   <table-link relationship-ref="REL250" pkConnection="0.2904761904761905" fkConnection="0.6972477064220184" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
